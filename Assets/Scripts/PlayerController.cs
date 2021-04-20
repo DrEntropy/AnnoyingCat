@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
- 
+
+    private float tablespeed = 4.0f;
     private float speed= 10.0f;
     private float minX = -22.0f;
     private float maxX = 30.0f;
@@ -32,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveDir = Vector3.forward * vInput + Vector3.up * hInput;
         transform.Translate(moveDir * speed * Time.deltaTime);
+        // Also always move left, to simulate table
+        transform.Translate(Vector3.up * tablespeed *(-1.0f)* Time.deltaTime);
 
     }
 
