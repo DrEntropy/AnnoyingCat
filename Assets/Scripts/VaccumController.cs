@@ -17,14 +17,18 @@ public class VaccumController : MonoBehaviour
 
     // Update is called once per frame
     // at first i will just have it move back and forth at constant speed.
-    // LATER: ADD RAndom ness, at least in the speed.
+    // LATER: ADD RAndom ness, at least in the speed and have it occassionaly
+    // Come very far to the right! Maybe it will blink or something to warn you
+    // and make a ton of noise.
+
+
     void Update()
     {
         
         if (transform.localPosition.x > maxX)  
         {
             currentDirection = -1.0f;
-            Debug.Log("Hit right max");
+            //Debug.Log("Hit right max");
             
         }
         if (transform.localPosition.x < minX)

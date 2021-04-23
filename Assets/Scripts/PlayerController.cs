@@ -38,6 +38,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Vac"))
+        {
+            // TODO actually what should happen? Sound: MEOW! and then game over.
+            Debug.Log("Game OVer? You got sucked");
+        }
+    }
+
     void ConstrainPlayer()
     {
 

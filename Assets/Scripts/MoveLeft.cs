@@ -11,7 +11,7 @@ public class MoveLeft : MonoBehaviour
     // Not sure if this will work.
     // Start is called before the first frame update
 
-    private float speed = 3.0f;
+    private float speed = 6.0f;
     void Start()
     {
         
@@ -22,4 +22,6 @@ public class MoveLeft : MonoBehaviour
     {
         transform.Translate(Vector3.left * speed*Time.deltaTime);
     }
+
+
 }
